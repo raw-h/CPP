@@ -17,6 +17,7 @@ void insert_sort(int arr[], int n){
         cout << arr[i] << " ";
     cout << endl;
 }
+
 int main(){
     int n;
     cin >> n;
