@@ -7,19 +7,14 @@ int main(){
     for (int i = 0; i < n; i++)
         cin >> arr[i];
     arr[n] = -1;
-    if (n == 1)
-    {
-        cout << "1" << endl;
-        return 0;
-    }
-    int ans = 0;
+    int rbd = 0;
     int mx = INT_MIN;
     for (int i = 0; i < n; i++)
     {
         if (arr[i] > mx && arr[i] > arr[i+1])
-            ans++;
-        mx = max(mx, arr[i]);
+            rbd++;
+        mx = max(arr[i], mx);
     }
-    cout << ans << endl;
+    cout << "The number of record breaking days = " << rbd << endl;
     return 0;
 }
