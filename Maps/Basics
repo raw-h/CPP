@@ -1,0 +1,6 @@
+Map is a data structure in which KEY-PAIR values are stored and these keys are mapped to corresponding values which can be accessed directly.
+The data types of KEY and Values can be different also. Key can be an integer and Value can be string.
+Maps are of 3 types: Maps, Unordered and Multimaps.
+1. Maps:- Values are stored in sorted order with the reference of Keys. Map is stored in memory in pairs of Key-Value and they are not stored in memory in a continuous manner, but still they are linked to each other. Since they are not continuous the iterator in can't work like i = i + 1, nut still it can work like i++.
+2. Unordered Maps:- Values are stored in random order, and because of this there's a difference in complexity of both Map and Unordered Map.
+The data structure working behind Maps is Red Black Trees.
