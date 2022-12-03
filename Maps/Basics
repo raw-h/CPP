@@ -1,17 +1,17 @@
-Map is a data structure in which KEY-PAIR values are stored and these keys are mapped to corresponding values which can be accessed directly.
+Map is a data structure in which KEY-VALUE pairs are stored and these keys are mapped to corresponding values which can be accessed directly. And all the values are unique in a map.
 The data types of KEY and Values can be different also. Key can be an integer and Value can be string.
 
-The data structure/implementation tehnique working behind Maps is Red Black Trees.
+The data structure/implementation technique working behind Maps is Red Black Trees.
 Maps are of 3 types: Maps, Unordered and Multimaps.
 
-1. Maps:- Values are stored in sorted order with the reference of Keys. Map is stored in memory in pairs of Key-Value and they are not stored in memory in a continuous manner, but still they are linked to each other. Since they are not continuous the iterator in can't work like i = i + 1, nut still it can work like i++.
+1. Maps:- Values are stored in sorted order with the reference of Keys. Map is stored in memory in pairs of Key-Value and they are not stored in memory in a continuous manner, but still they are linked to each other. Since they are not continuous the iterator i can't work like i = i + 1, but still it can work like i++.
 
     * The insertion operation takes O(log (n)) time. [Here n is the current size of the map.]
     * The accessing operation takes O(log (n)) time. [Here n is the current size of the map.]
-Eg:- m[6], only writing this also consumes  log n time, even though we haven't initialised it with any value, still the time is consumed, and when we don't provide it with any type of value it get intialised with 0 in case of all the number data types and empty in case of all character/string data types.
-
+Eg:- m[6], only writing this also consumes log n time, even though we haven't initialised it with any value, still the time is consumed even in the creation of the map, and when we don't provide it with any type of value it get intialised with 0 in case of all the numeric data types, and empty in case of all character/string data types.
     * Another thing is that all the keys in a map are always unique. No duplicate values are stored in maps, and if duplicate are present, then the previous value gets overidden by the latest value.
     * m.find(key) returns an iterator, and if it is not present, then the iterator returns m.end(). Time complexity of this function is also log(n).
     * m.erase(key), the pair with key value 3 is deleted. m.erase(it) this function also takes iterator as input, but the thing to remember is that we can't provide it with a value that is non-existent, if it happens segmentation fault with occur. Time complexity of this function is also log(n).
     * m.clear(), it clears the map.
+
 2. Unordered Maps:- Values are stored in random order, and because of this there's a difference in complexity of both Map and Unordered Map.
