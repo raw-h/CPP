@@ -1,0 +1,47 @@
+STL stands for Standard Template Library, it is an internally implemented libraby in c++.
+It can be divided into 4 parts:-
+
+1. Containers:- These are the pre-implemented data structures in c++. Containers also have 3 categories:-
+    a. Sequential:- (These are like array, who are implemented in a sequential manner)
+        Vectors.
+        Stack.
+        Queue.
+        Pair. (It is particularly not a container it is a class)
+
+    b. Ordered:- (In these data structures, order is maintained i.e the data is stored in an increasing/decreasing manner or in ascending/descending manner)
+        Maps.
+        Multimaps.
+        Sets.
+        Multisets.
+
+    c. Unordered:- (These are based in hashing algorithms, and then values are stored)
+    Unordered Maps.
+    Unordered Sets.
+
+    *There are many more containers but these are the mainly used among all the STL containers.
+
+    d. Nested Containers:- (Just like we have nested loops, these are containers among containers)
+    Eg:-
+        vector<vector<int>>
+        map<int,vector<int>>
+        set<pair<int,string>>
+        vector<map<int,set<int>>>
+
+2. Iterators:- These are similar to pointers, iterators are specially used to point to the memory addresses of the containers of STL.
+For many containers, the iterators are defined in a continuous manner, for vectors we can increment or decrement the iterator as i = i + 1 or i = i + 2,
+but in case of Sets, or Maps we can not simple do this.
+
+3. Algorithms:- (There are so many useful algorithms in c++ STL, but the most frequently used ones are these.)
+    a. upper_bound()
+    b. lower_bound()
+    c. sort(comparator)
+    d. max_element()
+    e. min_element()
+    f. accumulate()
+    g. reverse()
+    h. count()
+    i. find()
+    j. next_permutation()
+    k. prev_permutation()
+
+4. Functors:- (These are classes which can act as functions)
