@@ -1,0 +1,8 @@
+Vectors, are basically arrays with dynamic size and these are also continuous blocks of memory. The size of a vector at the time of declaration is 0, and it keeps on increasing as elements are added into it.
+Just like arrays vectors are also ZERO based in terms of indexing.
+If we declare a vector with size then the vector will be filled with empty value for the size we've declared it for, and then if we use push_back(), then the value will be added to the end of the vector and the size will be increased by 1. Even after being initialised with a size we can still increase or decrease the size of the vector.
+Syntax for declaring a vector is vector<datatype> (name of datatype).
+We can also declare a vector of pair using vector<pair<int,int>> (name of vector).
+For inserting values in a vector, first input it's size by the user and then create a loop of that size and in the loop use push_back function to insert the value in the end of the vector. The complexity of this function is O(1). ANd to remove the last value of a vector we use the pop_back function and it's time complexity is also O(1).
+Vectors can also be directly copied using, vector<datatype> (new_vector_name) = (vector_to_be_copied). And if we copy a vector like this then changes made in the new vector won't effect the first vector. And the complexity of this operation is O(n).
+We can also create vector of containers and and also insert vectors into vector.
