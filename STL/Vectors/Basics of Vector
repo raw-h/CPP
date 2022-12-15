@@ -6,3 +6,15 @@ We can also declare a vector of pair using vector<pair<int,int>> (name of vector
 For inserting values in a vector, first input it's size by the user and then create a loop of that size and in the loop use push_back function to insert the value in the end of the vector. The complexity of this function is O(1). ANd to remove the last value of a vector we use the pop_back function and it's time complexity is also O(1).
 Vectors can also be directly copied using, vector<datatype> (new_vector_name) = (vector_to_be_copied). And if we copy a vector like this then changes made in the new vector won't effect the first vector. And the complexity of this operation is O(n).
 We can also create vector of containers and and also insert vectors into vector.
+
+* Nesting In Vectors:- Instead of creating a pair of arrays it is way more convenient to create a vector of pair, so each value in this vector will store a pair as a value.
+And we output the values of a vector of pair in the similar manner as we did in pair using (name_of_vector)[iterator].first/second. 
+And in vector of pair, the realtion is always maintained, i.e if we swap one element with another the whole pair is swapped.
+
+Array of Vector:- 
+Syntax for Declaration:- vector<datatype>(name_of_vector)[sizeofarray].
+An array of vector means that we have been given a fixed number of vectors. It can be understood as a 2D array with fixed number of rows given by the user but the number of columns can vary or is dynamic as the columns here are the actual vectors and as we know vectors are dynamic, hence the columns are dynamic.
+
+Vector of Vector:-
+Syntax for Declaration:- vector< vector<datatype>>(name_of_vector).
+Here each element of the vector is itself a vector. For taking input in the case of vector of vector we have to first create a temporary vector take the input in it and then we have to input this temporary vector into the main vector of vectors. Here both the number of rows and columns are dynamic. We can alter the number of rows and columns whenever we want by push_back() & pop_back().
