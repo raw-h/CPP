@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
 // Function for printing the vector:-
 // void printVec(vector<int> k){
 //     cout << "Size of the vector is: " << k.size() << endl; // v.size() is used to find out the size of the vector and it's time complexity is O(1).
