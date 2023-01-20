@@ -1,11 +1,18 @@
-Pair:- It is a class in c++ STL which is used to store 2 values(data types) together, and we can also create pairs of different containers. These are used to maintain a relation between 2 values
-The syntax of a pair is pair<datatype1, datatype2> (name of pair). 
-We can use make_pair() which is an internal function to insert a value in a pair. And p(name of pair).first gives us the first value and p.second gives us the second value.4
+Pair:- It is a class in c++ STL which is used to store 2 values(data types) together, and we can also create pairs of different containers.
+These are used to maintain a relation between 2 values.
+
+The syntax of a pair is pair<datatype1, datatype2> (name of pair).
+
+We can use make_pair() which is an internal function to insert a value in a pair.
+And p(name of pair).first gives us the first value and p.second gives us the second value.
 We have another method to input the values in a pair p = {value to be inserted}.
+
 We can copy pairs simple by creating a new pair and equating it to the previously created pair.
     pair<int, string> p1 = p;
     But we need to keep in mind here p is not passed in referencial manner to p1 so any changes made in p1 wont be reflected into p.
     But if we pass p referencially into p1 then the changes in p1 will be reflected into p too.
     pair<int, string> &p1 = p;
     p1.first = 3; Here the first value of p will also be changed to 3.
-We can create an array of a pair using the syntax pair<datatype1, datatype2>(name of arrray)[], we do not use array of pairs very often, we generally use vector of pairs insted of this.
+
+We can create an array of a pair using the syntax pair<datatype1, datatype2>(name of arrray)[], we do not use array of pairs very often,
+we generally use vector of pairs insted of this.

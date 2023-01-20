@@ -4,7 +4,7 @@ using namespace std;
 int main(){
     pair<int,string> p;
     // p = make_pair(2, "abc"); The internal function to create a pair.
-    p = {3,"defg"}; // 2nd way of to input a value in a pair.
+    p = {3,"defg"}; // 2nd way to input a value in a pair.
 
     pair<int, string> p1 = p; // This sends a copy of p into p1. and any changes made in p1 won't be reflected into p.
     // pair<int, string> &p1 = p; Here p is passed into p1 in a referencial manner so any changes made into p1 will also get reflected into p.
