@@ -14,13 +14,13 @@ It can be divided into 4 parts:-
         Sets.
         Multisets.
 
-    c. Unordered:- (These are based in hashing algorithms, and then values are stored)
+    c. Unordered:- (These are based on hashing algorithms, and then values are stored)
     Unordered Maps.
     Unordered Sets.
 
     *There are many more containers but these are the mainly used among all the STL containers.
 
-    d. Nested Containers:- (Just like we have nested loops, these are containers among containers)
+    d. Nested:- (Just like we have nested loops, these are containers among containers)
     Eg:-
         vector<vector<int>>
         map<int,vector<int>>
