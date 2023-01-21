@@ -13,3 +13,13 @@ eg: cout << *it << endl; For first element.
 In iterators we can do (iterator_name)++, it will move the iterator to the next iterator of that container and it is not same as (iterator_name) = (iterator_name) + 1;
 And the above difference exists because when we do iterator++, the iterator moves to the next iterator of that container which gives us the next value of the container.
 But iterator + 1 will give us the element in the next location in the memory and this will generate error in case of discontinuous containers like maps and sets.
+
+The code while using iterators was too lenghty and this wa simproved with the release of C++ 11 which gave many new features for shortening the codes.
+The 2 features are Range-based loops and Auto keyword.
+
+1. Range Based Loops:- Here we can directly iterate over the elements of the containers.
+The syntax for this loop is for(int value : v){cout << value << " ";}.
+Here "value" is a copy of the particular element in the container. And to pass the actual value of the vector we can use &value in place of value.
+
+2. Auto keyword:- It specifies and deducts the type of the variable that is being declared.
+eg: auto a = 1; Here auto will be of integer type.
