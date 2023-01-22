@@ -14,7 +14,7 @@ int main(){
     }
     int q;
     cin >> q;
-    while(q--){
+    while(q--){ 
         string s;
         cin >> s;
         cout << m[s] << endl;
