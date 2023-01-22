@@ -12,7 +12,7 @@ int main(){
     {
         string a;
         cin >> a;
-        // q[a] = q[a] + 1;
+        // q[a] = q[a] + 1; Here when we type q[a] it will be equal to 0 as the value type in this map is integer.
         q[a]++;
     }
     for(auto pt: q)
