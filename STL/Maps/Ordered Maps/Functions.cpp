@@ -21,10 +21,12 @@ int main(){
     else
         cout << it->first << " " << it->second << endl;
 
+    // m.erase(3);
     auto pt = m.find(3);
     if(pt != m.end()) //Here we've used this condition because if the iterator points to a non-existent value then segmentation fault will occur.
         m.erase(pt); //Erase function, it takes iterator as well as key as an input. Takes O(log(n)) time.
-
+    
     print(m);
+    m.clear(); // This function is used to clear the whole map.
     return 0;
 }

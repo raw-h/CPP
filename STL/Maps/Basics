@@ -1,25 +1,28 @@
-Map is a data structure in which KEY-VALUE pairs are stored and these keys are mapped to corresponding values which can be accessed directly. And all the values are unique in a map.
-The data types of KEY and Values can be different also. Key can be an integer and Value can be string.
+Map is a data structure in which KEY-VALUE pairs are stored and these keys are mapped to corresponding values which can be accessed directly.
+And all the values are unique in a map.
+The data types of KEY and VALUES can be different also. Key can be an integer and Value can be string.
 
-The data structure/implementation technique working behind Maps is Red Black Trees.
 Maps are of 3 types: Maps, Unordered and Multimaps.
 
-1. Maps:- Values are stored in sorted order with the reference of Keys. Map is stored in memory in pairs of Key-Value and they are not stored in memory in a continuous manner, but still they are linked to each other.
+1. Maps:- Values are stored in sorted order with the reference of Keys. Map is stored in memory in pairs of Key-Value
+and they are not stored in memory in a continuous manner, but still they are linked to each other.
 Since they are not continuous the iterator i can't work like i = i + 1, but still it can work like i++.
+The data structure/implementation technique working behind Ordered-Maps is Red Black Trees, it is a self balancing tree.
 
     * The insertion operation takes O(log (n)) time. [Here n is the current size of the map.]
     * The accessing operation takes O(log (n)) time. [Here n is the current size of the map.]
 Eg:- m[6], only writing this also consumes log n time, even though we haven't initialised it with any value, still the time is consumed even in the creation of the map, 
-        and when we don't provide it with any type of value it get intialised with 0 in case of all the numeric data types, and empty in case of all character/string data types.
-    * Another thing is that all the keys in a map are always unique. No duplicate values are stored in maps, and if duplicate are present, then the previous value gets overidden by the latest value.
-    * m.find(key) returns an iterator, and if it is not present, then the iterator returns m.end(). Time complexity of this function is also log(n).
+        and when no data is provided it get intialised with 0 in case of all the numeric data types & empty in case of all character/string data types.
+    * All the keys in a map are unique. No duplicate values are stored in maps, if duplicates are given as input the previous value gets overidden by the latest value.
+    * m.find(key) returns an iterator, and if key is not present, then the iterator returns m.end(). Time complexity of this function is also log(n).
     * m.erase(key), the pair with key value 3 is deleted. m.erase(it) this function also takes iterator as input, but the thing to remember is that we can't 
         provide it with a value that is non-existent, if it happens segmentation fault with occur.
         Time complexity of this function is also log(n).
     * m.clear(), it clears the map.
 
-    This was for a map having integer key and string value, in that particular case the time complexities were O(log(n)). But if the map had key and value both of string type then, 
-    the time complexities would've been different as in case of Ordered Map comparison takes place with every insertion and then the new key-value pair is placed in the right place after the comparison of it's key with all the existing keys,
+    This was for a map having integer key and string value, in that particular case the time complexities were O(log(n)).
+    But if the map had key and value both of string type, then the time complexities would've been different as in case of Ordered Map
+    comparison takes place with every insertion and then the new key-value pair is placed in the right place after the comparison of it's key with all the existing keys,
     so we have to also take the comparison time in account since this time in case of integer is very less we didn't take it into consideration.
 
 
@@ -31,8 +34,8 @@ The major differences between Ordered Maps and Unordered Maps are:-
     b. Time complexities.
        -> Average time complexity of accessing, inserting, finding, erasing is O(1).
     c. Valid keys datatypes.
-        -> In case of ordered maps we could use any type of complex or even simple data types bucause in O-Maps the keys can be compared with other keys, 
-        but in unordered maps since the implementation is of Inbuilt Hash Table and only those quantities can be used as a key whose hash function is defined in the hash table.
+        -> In case of ordered maps we could use any type of complex or simple data types because in O-Maps the keys can be compared with other keys, but here 
+        the implementation is of Inbuilt Hash Table and only those quantities can be used as a key whose hash function is defined in the hash table.
         eg:- "map<pair<int,int>, string> m" is valid in ordered maps but in upordered map it will throw a compilation error.
 
 
