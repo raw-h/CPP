@@ -1,0 +1,22 @@
+In Maps we used to store data in format of Key-Value pairs, in Sets there are only Keys, and not Values. Basically a Set of UNIQUE Keys/Elements.
+Internal implementation of Set is also done by Red Black Trees (The self balancing trees).
+We can create a set of any type of container/any datatype. We can also create set of set. Nesting of sets and maps is also possible.
+
+Types of Sets:
+a. Normal Sets:- It stores the unique elements in their sorted order.
+    Declaration: set<datatype> (name_of_set).
+    Insertion in sets can be done in various ways.
+        1. (name_of_set).insert(Element); The time complexity of the above operation is log(n).
+        2. Using a loop.
+    Accessing a particular element in a set can be done by using (name_of_set).find(Element) And the iterator of the element will be returned if the element is present.
+    And the complexity of this operation is log(n).
+    To delete an element we use (name_of_set).erase(); function. This function can take 2 types of values an iterator and an element itself.
+
+b. Unordered Sets:- It stores the unique elements according to their order of inputs.
+    Declaration: unordered_set<(datatype)> (name_of_set);
+    Similar function can be used in unordered sets that were used in ordered sets. All the functions that took log(n) complexity in ordered set will take o(1) time here.
+    Here the internal implementation is of Hash Table just like that in Unordered Maps. And the same thing applicable on unordered maps for the datatype is also applicable here.
+    i.e The datatype of the unordered set can not be a complex one.
+
+c. Multi Sets:- Just like multimaps, Multiset allows us to insert the same value multiple times into the set.
+    Here the time complexities of the functions are log(n).
