@@ -18,5 +18,5 @@ b. Unordered Sets:- It stores the unique elements according to their order of in
     Here the internal implementation is of Hash Table just like that in Unordered Maps. And the same thing applicable on unordered maps for the datatype is also applicable here.
     i.e The datatype of the unordered set can not be a complex one.
 
-c. Multi Sets:- Just like multimaps, Multiset allows us to insert the same value multiple times into the set.
+c. Multi Sets:- Just like multimaps, Multiset allows us to insert the same value multiple times into the set. Here also the values are stored and inserted in sorted order.
     Here the time complexities of the functions are log(n).
