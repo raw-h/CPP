@@ -41,3 +41,9 @@ The major differences between Ordered Maps and Unordered Maps are:-
 
 3. Multimaps:- It is very much like maps and it is also implemented using red black trees. And is declared like this "mulimap<pair<int,int>, string> m;".
     The only difference between maps and multimaps is that we can it can also store duplicate keys in addition to maps.
+
+Nesting:-
+    If we insert a pair(int, int) as a key in ordered maps. Then it will be stored in sorted order, but the sorting will happen in a manner where the 1st element of the 
+    pair will be compared with the 1st element of another pair and then it will insert accordingly, but if the 1st values of both the pairs are same, then it will go to 
+    the 2nd value for comparison and then insert accordingly. 
+    And this happen in every datatype/container whose values can be compared it doesn't matter whether it is a pair, a set or a vector.
