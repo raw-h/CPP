@@ -1,1 +1,18 @@
-dssfgdsfg
+Stack is a LIFO (Last In First Out) Data Structure. The element entered first will be accessed in the end. And the element inserted at the last will be accessed first.
+There are 2 basic things that can be accessed in a stack 
+    a. Top element 
+    b. Size of Stack.
+There are 3 basic operations that can be carried out in case of a Stack data structure
+    a. Push:- An element can be pushed at the top of the stack.
+    b. Pop:- The top element of a stack can be popped out.
+    c. Top:- Accessing the topmost element of a stack.
+Recursion is implemented internally using Stacks. It is useful for situations like Balanced Paranthesis and also Next Greater Element.
+
+Declaration:-
+    stack<(datatype/data structure)> name_of_stack;
+
+Functions:-
+    a. name_of_stack.push(element); (To push an element in the stack).
+    b. name_of_stack.pop(); (To pop the last element of the stack).
+    c. name_of_stack.top(); (To access the top element in the stack, this is just for accessing the value and nothing else).
+    d. name_of_stack.empty(); (Returns a boolean value either TRUE if stack is empty or FALSE if stack is not empty).
