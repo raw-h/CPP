@@ -5,6 +5,21 @@ eg of objects are:- Camera, car, jug, bottle, and any object in the real world.
 Why do we need this type of programming?
 So that the readiblity of our program increases, to increase the manageability of our program and extensibility.
 
+The memory allocation of a structure is Sequential, in this type of memory allocation there are 2 rules to be followed:-
+    1. Any data type will always store it's value at the address, which is multiple of the size of that data type.
+    2. Structure will take the size equal to the multiple of maximum bytes taken by a variable in that structure, 
+    so if a structure contains a char(1 byte) and a short int(2 bytes) its size will not be 3, it's size will be 4, as char will be stored at 0th position, but the short int will be stored at the 2nd and 3rd
+    position as the fitst multiple of 2 which in un occupied is 2. So position 0, 2 and 3 are used but still position 1 is still inside the architecture so the answer is 4.
+Padding:- This is the extra bytes given to a structure if the 2nd rule of Sequential Memory allocation is not being full-filled.
+
+const keyword:- It is something that does not change, and it must be initialised while declared it is used to make program elements constant.
+    Using const keyword we create read only entities, which can not be changed down the line.
+    It can be used with:-
+    1. Variables
+    2. Class Data members:- These are data variables in class which are made const, they are not initialised during declaration, their initialization occur in the constructor.
+    3. Class Member functions:- It never modifies data members in an object, and this is done by return_type function_name() const;
+    4. Class Object:- When an object is declared or created with const, it's data members can never be changed, during object's lifetime.
+
 Class:- It is a user defined data type. It is a type of templateand an Object is an instance of class.
 Size of an object is equal to the size of all of its properties.
 
@@ -19,7 +34,7 @@ To access the data members or properties we have to use the "." (DOT) operator.
 Access Modifiers:- It means where the data members/behaviour in a class can be accessed, whether only in a class or also in a child class or also in a function.
     1. Public :- We can use these anywhere, in the class and also outside of the class.
     2. Private :- It means that the data member or the behaviour can only be accessed only insize the class, outside it will result into an error.
-    3. Protected :- 
+    3. Protected :- Similar to private, the only difference is that it can also be accessed in derived or child class unlike private members who are not even accessible in sub class.
 By default the access modifier of any class is private.
 
 Getters & Setters: These are one liner functions used to obtain or assign values of private data members of a class. We can not assign values to a private data member like we can
@@ -69,39 +84,61 @@ No need to create an object.
 They don't have 'this' keyword, because this gives the address of the current object, and since there in no object created so we can not use this keyword.
 Thes functions can only access static members.
 
+Initialisation list:- It is a list we can use to initialise the class objects.
+    The syntax for that is:-
+    constructor (argument-list) : initialisation section{
+        assignment + other code;
+    }
+    The initialisation section is the part which is used to quickly assign the initial values. 
+eg:- 
+class Test{
+    int a; // As a is written frist it will be initialised first and because of that it should be before b in the initialisation section.
+    int b;
+public:
+    Test(int i, int j) : a(i), b(j){
+        // We can also use 
+        a = i;
+        b = j;
+        body;
+    }
+};
 
+4 Pillars of OOPS:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1. Padding and Greedy Alignment?
-2. const keyword (how to use it in object creation, how to create const type functions).
-initialisation list
+1. Encapsulation:- In simple terms it is known as wrapping up of Data Members and Functions together. We do this when we create a class, we encapsulate it with some data members and some functions.
+    Fully Encapsulated Class, this is a class in which all the data members are private and can be only accessed within the class.
+    This is Information Hiding / Data hiding.
+    Advantages:-Data Hiding (it increases security).
+            We can make our class into a "Read Only" class.
+            Code reusability.
+            Unit Testing.
+2. Inheritance:- It means inheriting some functions of one class into another class. Here the class that is inheriting the functions is known as Child-Class or Sub-Class, and the class from which the functions are being 
+    inherited in known as Parent-Class or Super-Class.
+    Syntax:- class <sub_class> : <access modifier> <parent_class>
+    Here the access modifiers that we use define how the data members or functions inherited will be accessed in the child class.
+* Private Data Member of any class can not be inherited.
+* When a class is inherited in a protected manner, we can use getter and setters to access the data members.
+    __________________________________________________
+    |Super-Class        Sub-Class       Accessibility |
+    |_________________________________________________|
+    |Public             Public          Public        |
+    |Public             Private         Private       |
+    |Public             Protected       Protected     |
+    |_________________________________________________|
+    |Private            Public          Not accessible|
+    |Private            Private         Not accessible|
+    |Private            Protected       Not accessible|
+    |_________________________________________________|
+    |Protected          Public          Protected     |
+    |Protected          Private         Private       |
+    |Protected          Protected       Protected     |
+    |_________________________________________________|
+    Types of Inheritance:-
+        1. Single:- A single class is inherited from a single class.
+        2. Multiple:- When one class inherits more than 1 class.
+            Syntax:- class <class_name> : <access_specifier> <Super-class_name>, <access_specifier> <Super-class_name>, <access_specifier> <Super-class_name>....
+        3. Multi-Level:- Class B is inherits class A, class C inherits class B, class D inherits class C, hence multiple classes are inherited on multiple level.
+        4. Hierarchical:- One class serve as parent class for more than one class.
+        5. Hybrid:- Combination of more than one type of inheritance.
+    Inheritance Ambiguity: If two classes have a function with same name and a third class inherits both the classes using multiple inheritance, then which function will be called once user calls the function.
+    This problem is solved by the scope resolution operator ::, <object_name>.<class_name>::<function_name>;
