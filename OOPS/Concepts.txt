@@ -1,0 +1,107 @@
+It is a type or style of programming which revolves around objects, their properties and their behaviours.
+An object is an entitiy which has 2 things:- 1. A state or property 2. A behaviour 
+eg of objects are:- Camera, car, jug, bottle, and any object in the real world.
+
+Why do we need this type of programming?
+So that the readiblity of our program increases, to increase the manageability of our program and extensibility.
+
+Class:- It is a user defined data type. It is a type of templateand an Object is an instance of class.
+Size of an object is equal to the size of all of its properties.
+
+When we create an instance of a class i.e an object we initialize the values of it's properties either with a value by ourself or by a garbage value.
+* In case of an empty class (a class with no properties) a memory of 1 byte is allocated to it, so as to keep a track of the instance created.
+
+We can also create an object without creating the class in the same program, i.e we can create an object from a class defined elsewhere in the folder we just have to include
+it in the current program by #include "name_of_the_class.cpp"
+
+To access the data members or properties we have to use the "." (DOT) operator.
+
+Access Modifiers:- It means where the data members/behaviour in a class can be accessed, whether only in a class or also in a child class or also in a function.
+    1. Public :- We can use these anywhere, in the class and also outside of the class.
+    2. Private :- It means that the data member or the behaviour can only be accessed only insize the class, outside it will result into an error.
+    3. Protected :- 
+By default the access modifier of any class is private.
+
+Getters & Setters: These are one liner functions used to obtain or assign values of private data members of a class. We can not assign values to a private data member like we can
+to a public data member.
+While getter have only one work tht is to fetch the value but we can use setter in various ways by imposing different conditions as to who can set the value of a private data member.
+When we create an object by <class_name> <object_name> we care using static allocation, but to do it dynamiclaly we can do it as <class_name> * <object_name> = new <class_name>;
+
+Whenever we create an object a CONSTRUCTOR is called, a constructor's name is always the same as that of the class.
+Constructor is invoked during object creation, it does not have a return type, it does not take any input parameters. (BTS what will happen is <object_name>.<class_name>() will be called.)
+This is the Default Constructor.
+
+The Constructor that is called when the object is instantiated is called the Default Constructor.
+(this: it stores the address of the current obect)
+Parameterised Constructor: These constructor takes different parameters with them and then we can use this keyword to differentiate between the parameters if they have the same name.
+
+* The moment we write a constructor inside the class the default constructor stops working.
+
+Copy Constructor:- (This is also another inbuilt constructor like the Default that a class provides you). This copies the values of one object into another.
+It is done as Hero R(S); here we have created a hero R and in the parameter we passed another existing hero S.
+As this constructor takes another object as a parameter we must pass it by reference and not by vale because if we do it by value then a copy will be created and since this is the new copy constructor it will call itself
+and then it will create another copy of the object passed as parameter, hence it will get stuck in a permanent loop.
+
+Shallow & Deep Copy:-
+
+In Shallow Copy we are accessing the same memory with 2 or more different names, that's why whenever we change one value of any one object the same value gets changed in every other object also.
+The default Copy Constructor does shallow copy.
+
+While Deep Copy creates another copy of all the data members of the object and then copies the values from one object to the second object.
+Since there are different memory locations in this case the problem with shallow copy is solved.
+
+Copy Assignment Operator:-
+Here we are simply copying the values of an already existing object to another one by using = .
+
+Destructor:- These are used for memory deallocation, it is called as the objects becomes out of scope and it frees the memory.
+It is also created when an object is created, it has the same name as the class, no return type, no input parameters.
+We can also create our own destructors, using a tilde(~) in front of it.
+Destructor are automatically called for static objects. And for dynamically created objects we have to call the destructor by delete <object_name>.
+
+Static Keyword:-
+It is used to create a data member which belongs to the class. It can be accessed without having to create an object.
+How to initialize it ?
+<datatype> <class_name> :: <function_name> = <value>
+:: is the scope resolution operator.
+
+Static Function:-
+No need to create an object.
+They don't have 'this' keyword, because this gives the address of the current object, and since there in no object created so we can not use this keyword.
+Thes functions can only access static members.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Padding and Greedy Alignment?
+2. const keyword (how to use it in object creation, how to create const type functions).
+initialisation list
