@@ -1,0 +1,6 @@
+Linked List is a type of dynamic linear data structure which is a collection of nodes. A node consists of 2 things data and poninter to the address of next node.
+Linked List is used to overcome some of thr disadvantages of arrays and vectors. The first node is called the head.
+Types of Linked List:-
+    1. Singly LL:- When we have only data and next in a LL and going into only one direction.
+    2. Doubly LL:- The structure for a node of doubly LL is (previous pointer) (data) (next pointer). The previous of the first node points and next of the last node points to NULL.
+    3. Circular LL:-
