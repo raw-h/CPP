@@ -112,6 +112,7 @@ public:
             We can make our class into a "Read Only" class.
             Code reusability.
             Unit Testing.
+
 2. Inheritance:- It means inheriting some functions of one class into another class. Here the class that is inheriting the functions is known as Child-Class or Sub-Class, and the class from which the functions are being 
     inherited in known as Parent-Class or Super-Class.
     Syntax:- class <sub_class> : <access modifier> <parent_class>
@@ -142,3 +143,18 @@ public:
         5. Hybrid:- Combination of more than one type of inheritance.
     Inheritance Ambiguity: If two classes have a function with same name and a third class inherits both the classes using multiple inheritance, then which function will be called once user calls the function.
     This problem is solved by the scope resolution operator ::, <object_name>.<class_name>::<function_name>;
+
+3. Polymorphism:- When the same thing exists in multiple forms, we call this property as polymorphism.
+    There are 2 types of Polymorphism:-
+    a. Compile time polymorphism(Static Polymorphism) = Here we know already at the time of compiling, in what forms a pariticular entity exists.
+        It is of 2 types:-
+            1. Function Overloading:- Writing the same function in multiple forms, by just creating a small change in it's signature by adding some parameters, but if we have functions with same name and parameters with only
+               different return types it will generate an error and overloading will not be achieved by it. 
+            2. Operator Overloading:-  Here we will assign new tasks to the pre-existing operators. We can not perform operator overloading for every operator out there.
+    b. Run time polymorphism(Dynamic Polymorphism) = Method overriding is done in this. Here we don't know in compile time that one entity exists in multiple forms it can only be confirmed during runtime. There are 3 rules for this:-
+        1. Functions must have the same name.
+        2. Functions must have same parameters.
+        3. It can be only achieved through inheritance.
+        In this polymorphism we change the implementation of a function in the sub class.
+
+4. Abstraction:- Implementation hiding, and only the essential imformation is shown.
