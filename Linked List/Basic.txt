@@ -3,4 +3,4 @@ Linked List is used to overcome some of thr disadvantages of arrays and vectors.
 Types of Linked List:-
     1. Singly LL:- When we have only data and next in a LL and going into only one direction.
     2. Doubly LL:- The structure for a node of doubly LL is (previous pointer) (data) (next pointer). The previous of the first node points and next of the last node points to NULL.
-    3. Circular LL:-
+    3. Circular LL:- In this type of LL the last node points to the first node except of NULL, singly LL can be converted to circular and doubly LL can also be converted of circular.
