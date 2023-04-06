@@ -28,7 +28,6 @@ int main()
         }
     }
     sort(answer.begin(), answer.end());
-
     for (int i = 0; i < answer.size(); i++)
     {
         for (int j = 0; j < answer[i].size(); j++)
