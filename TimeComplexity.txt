@@ -1,0 +1,19 @@
+Time Complexity, it is the amount of time taken by an algorithm to run. It answers us as a function of length of the input.
+It is the metric that is used to determine whether the program is more efficient or not when compared to other programs.
+
+1. Big O Notation :- It gives us the upper bound, i.e the maximum time a program can take to execute.
+2. Theta Notation :- It is used for the average case complexity.
+3. Omega Notation :- It gives us the lower bound, i.e the minimum time a program can take to execute.
+
+O(1) = Constant time i.e there are no variables in the program, the oeprations will be carried out for a constant number of times.
+O(n) = Linear time, i.e the operations will be carried out for all the input hence n times.
+O(logn) = Logarithmic time, i.e it will take half the time with each iteration.
+O(n^2) = Quadratic time, i.e it will work twice for every input.
+O(n^3) = Cubic time, i.e it will work thrice on every input.
+
+                    Complexity Increases ->
+O(1), O(logN), O(n), O(NlogN), O(n^2), O(n^3), O(2^N), O(N!)
+
+
+Space Complexity, it is the amount of memory taken by an algorithm.
+Variables have a constant space complexity, i.e O(1).
