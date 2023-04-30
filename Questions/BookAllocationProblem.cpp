@@ -1,59 +1,50 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+bool isPossibleSoln(vector<int> &arr, int mid, int student){
+    int stud = 1;
+    int pageSum = 0;
+    for(int i = 0; i < arr.size(); i++){
+        if(pageSum + arr[i] <= mid)
+            pageSum += arr[i];
+        else{
+            stud++;
+            if(stud > student || arr[i] > mid)
+                return false;
+            pageSum = arr[i];
+        }
+    }
+    return true;
+}
+
 int main()
 {
     int n;
-    // cout << "Input the array size: " << endl;
     cin >> n;
-
-    int arr[n];
-    // cout << "Input the array elements: " << endl;
+    vector<int> nums;
+    int sum = 0;
     for (int i = 0; i < n; i++)
-        cin >> arr[i];
-    
-    int students;
-    // cout << "Input the number of students: " << endl;
-    cin >> students;
-
-    int search_space_UL = 0;
-    for (int i = 0; i < n; i++)
-        search_space_UL += arr[i];
-    
-    int final_ans = 0;
-    int low = 0, high = search_space_UL, mid;
-    
-    while (low <= high)
     {
-        bool flag = 0;
-        mid = low + (high - low) / 2;
-        int stu_count = 1;
-        int page_sum = 0;
-    
-        for(int i = 0; i < n; i++)
-        {
-            if(page_sum + arr[i] <= mid)
-                page_sum += arr[i];
-            else{
-                stu_count++;
-                if(stu_count > students || arr[i] > mid){
-                    flag = 1;
-                    break;
-                }
-                page_sum = arr[i];
-            }
-        }
-    
-        if(!flag){
-            final_ans = mid;
-            high = mid - 1;
-        }
-        else{
-            low = mid + 1;
-        }
-        // cout << "Final ans inside loop = " << final_ans << endl;
-        // cout << "Student count = " << stu_count << endl;
+        int x;
+        cin >> x;
+        nums.push_back(x);
+        sum += x;
     }
-    
-    cout << final_ans << endl;
+    int stu;
+    cin >> stu;
+    int start = 0;
+    int end = sum;
+    int mid, ans;
+    while (start <= end)
+    {
+        mid = start + (end - start) / 2;
+        if(isPossibleSoln(nums, mid, stu)){
+            ans = mid;
+            end = mid - 1;
+        }
+        else
+            start = mid + 1;
+    }
+    cout << "Min possible distribution is:- " << ans << endl;
     return 0;
 }
