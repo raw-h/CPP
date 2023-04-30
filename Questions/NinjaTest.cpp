@@ -34,13 +34,13 @@ int main()
         end += time[i];
         start = max(start, time[i]);
     }
-    
+
     int n;
     cin >> n;
     int mid;
     int ans;
     bool flag = 1;
-    
+
     while (start <= end)
     {
         mid = start + (end - start) / 2;
