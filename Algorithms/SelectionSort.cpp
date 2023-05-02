@@ -2,7 +2,6 @@
 It is a sorting technique to sort the elements of an array in increasing as well as decreasing order.
 This algorithm works by picking the smallest element of the remaining array, i.e if the iterator(i) is at 2 of an array having 5 elements, then the remaining array will be after the index 2,
 after positioning the smallest element of the remaining array at the i-th position the iterator moves forward.
-
 */
 
 #include<bits/stdc++.h>
