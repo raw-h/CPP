@@ -6,7 +6,7 @@ The way quick sort works is that it first does partition of left and right by pu
 Partitioning:-
     1. First you need to take and element called pivot, it is the element that will be put in its right place.
     2. Then count all elements less than the pivot element.
-    3. Now shift pivot to its right position, i.e start + count.
+    3. Now shift pivot to its right position, i.e start + count. 
     4. Then we need to make so that all the elements on the left of pivot are less than pivot element and on the right are greater than pivot.
     5. For correcting the left and right arrays we will take 2 pointers one at start and other at the end and if the element at right is smaller than pivot
        then it is swapped with the element on the left side and then the pointers are incremented and decremented by 1.
