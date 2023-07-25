@@ -9,8 +9,9 @@ The memory allocation of a structure is Sequential, in this type of memory alloc
     1. Any data type will always store it's value at the address, which is multiple of the size of that data type.
     2. Structure will take the size equal to the multiple of maximum bytes taken by a variable in that structure, 
     so if a structure contains a char(1 byte) and a short int(2 bytes) its size will not be 3, it's size will be 4, as char will be stored at 0th position, but the short int will be stored at the 2nd and 3rd
-    position as the fitst multiple of 2 which in un occupied is 2. So position 0, 2 and 3 are used but still position 1 is still inside the architecture so the answer is 4.
+    position as the fitst multiple of 2 which is un occupied is 2. So position 0, 2 and 3 are used but still position 1 is still inside the architecture so the answer is 4.
 Padding:- This is the extra bytes given to a structure if the 2nd rule of Sequential Memory allocation is not being full-filled.
+Greedy alignment:- aka Data alignment, it means putting thr data in memory at an address equal to ome multiple of the word size, so as to increase the performance of the system due to the way CPU handles memory.
 
 const keyword:- It is something that does not change, and it must be initialised while declared it is used to make program elements constant.
     Using const keyword we create read only entities, which can not be changed down the line.
