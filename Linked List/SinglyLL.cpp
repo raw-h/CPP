@@ -92,6 +92,34 @@ void deleteNode(Node *&head, int position, Node *&tail)
     }
 }
 
+void deleteNode_val(Node *&head, int data, Node *&tail)
+{
+    Node *temp = head;
+    if(temp->data == data){
+        head = head->next;
+        temp->next = NULL;
+        delete temp;
+        return;
+    }
+
+    Node *curr = head;
+    Node *prev = NULL;
+    while (curr != NULL)
+    {
+        if(curr->data == data)
+            break;
+        prev = curr;
+        curr = curr->next;
+    }
+    if (curr->next == NULL)
+    {
+        tail = prev;
+    }
+    prev->next = curr->next;
+    curr->next = NULL;
+    delete curr;
+}
+
 void print(Node *&head)
 {
     Node *temp = head;
@@ -135,5 +163,8 @@ int main()
     deleteNode(head, 5, tail);
     print(head);
     cout << "Head = " << head->data << " Tail = " << tail->data << endl;
+    deleteNode_val(head, 5, tail);
+    cout << "Head = " << head->data << " Tail = " << tail->data << endl;
+    print(head);
     return 0;
 }
