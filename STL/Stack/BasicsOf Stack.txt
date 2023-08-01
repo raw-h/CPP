@@ -16,3 +16,23 @@ Functions:-
     b. name_of_stack.pop(); (To pop the last element of the stack).
     c. name_of_stack.top(); (To access the top element in the stack, this is just for accessing the value and nothing else).
     d. name_of_stack.empty(); (Returns a boolean value either TRUE if stack is empty or FALSE if stack is not empty).
+    e. name_of_stack.size(); (Returns the size of the stack).
+
+Stack Implementaion (Sometimes it is asked to implement your own, with custom functions that works exactly like the predefined functions of stack).
+    
+    To implement a stack we have 2 ways:-
+    1. Using Arrays:- For implementing stack using arrays there are few parameters to be known for it's implementation
+        a. top:- The index of the space where next element will be pushed.
+        b. arr:- An array where the elements will be stored and all the operations will be done.
+        c. size:- Size of the array.
+
+        Operations:-
+            1. push():- Initially the top will be at -1, then it will check whether there is space in the array to push another element or not,
+                if there is then it will be inserted and top will be incremented by 1, if not then the stack will overflow.
+            2. pop():- This function will first check whether the stack is empty or not, if it is empty then stack underflow will happen but if it has elements
+                then it will delete the element represented by top and will decrement the top by 1.
+            3. empty():- This function will return a bool value depending on the position of top, if top is at -1 then the list is empty and 1 will be returned,
+                if top is not at -1 then 0 will be returned meaning the stack is not empty.
+            4. top():- It will return the last element present in the array, or it will return -1 if there is no element in the array.
+    
+    2. Using Linked List
