@@ -8,6 +8,7 @@ There are 3 basic operations that can be carried out in case of a Stack data str
     c. Top:- Accessing the topmost element of a stack.
 Recursion is implemented internally using Stacks. It is useful for situations like Balanced Paranthesis and also Next Greater Element.
 
+
 Declaration:-
     stack<(datatype/data structure)> name_of_stack;
 
