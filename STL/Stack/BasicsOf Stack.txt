@@ -9,6 +9,7 @@ There are 3 basic operations that can be carried out in case of a Stack data str
 Recursion is implemented internally using Stacks. It is useful for situations like Balanced Paranthesis and also Next Greater Element.
 One of the properties of stackis that whatever is pushed into it, the stack gives it back in a reverse order.
 
+
 Declaration:-
     stack<(datatype/data structure)> name_of_stack;
 
