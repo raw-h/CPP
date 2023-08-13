@@ -12,7 +12,6 @@ One of the properties of stackis that whatever is pushed into it, the stack give
 Declaration:-
     stack<(datatype/data structure)> name_of_stack;
 
-
 Functions:-
     a. name_of_stack.push(element); (To push an element in the stack).
     b. name_of_stack.pop(); (To pop the last element of the stack).
