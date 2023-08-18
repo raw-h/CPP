@@ -1,0 +1,25 @@
+Tree is a non-linear data structure, where one node can be linked to multiple nodes.
+
+Basic Terminologies:-
+1. Node:- One element of a tree is known as Node and it keeps the data.
+2. Root:- The node from which the tree starts is known as Root Node.
+3. Childern:- The node which is below another node is is a Child to the node above.
+4. Parent:- The node which is above another node is is a Parent to the node below.
+5. Sibling:- The child nodes having same parent are known as Siblings.
+6. Ancestors:- All the nodes(connected to the subject node) above the taken node are it's Ancestors.
+7. Descendant:- All the nodes(connected to the subject node) below the taken node are it's Descendants.
+8. Leaf:- The node which has no child is known as Leaf node.
+
+Binary Tree is a type of tree where there are 2 or less than 2 children at each of the following levels.
+Structure of a node in Binary Tree:-
+node{
+    int data;
+    node left;
+    node right;
+}
+
+For a tree to have multiple children the structure of the tree must be like :-
+node{
+    int data;
+    list<node*> child;
+}
