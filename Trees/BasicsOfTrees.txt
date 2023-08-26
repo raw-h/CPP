@@ -10,6 +10,7 @@ Basic Terminologies:-
 7. Descendant:- All the nodes(connected to the subject node) below the taken node are it's Descendants.
 8. Leaf:- The node which has no child is known as Leaf node.
 
+
 Binary Tree is a type of tree where there are 2 or less than 2 children at each of the following levels.
 Structure of a node in Binary Tree:-
 node{
