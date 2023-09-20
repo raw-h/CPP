@@ -18,7 +18,6 @@ node{
     node right;
 }
 
-
 For a tree to have multiple children the structure of the tree must be like :-
 node{
     int data;
