@@ -1,0 +1,33 @@
+What is Heap -> It is a Complete Binary Tree that comes with a Heap order property.
+Complete Binary Tree is a tree, where every level is completely filled except the last level, nodes are always added from the left or they always lean towards the left.
+In a CBT, there are a particular number of leaf nodes which is from (n/2 + 1) to n, where n is the size of the heap. And since these are leaf nodes they don't need to be processed.
+
+According to the Heap Order Property, we have 2 types of Heaps:-
+1. Max Heap:- Here the parent node's data is always greater than the data of it's child nodes. 
+2. Min Heap:- Here the parent node's data is always lower than the data of it's child nodes. 
+
+Here we will implement Max Heap using Arrays.
+
+Insertion:- Here node will be the i-th index.
+            Left child will be accessed by (2 * i). 
+            Right child will be accessed by (2 * i + 1).
+            To visit the parent from any child we will do (i / 2).
+Time complexity of insertion in Max heap is O(logN).
+
+Deletion:- Here we are deleting the data of the first(root) node and then adjusting the whole tree to follow the property of Max Heap.
+        Step 1:- Copy the value of last node into the first node, i.e arr[1].
+        Step 2:- Reduce the size by 1.
+        Step 3:- Adjust the tree according to the properties of a Complete Binary Tree.
+Time complexity of Deletion is also O(logN). 
+
+Heapify Algorithm:- The function of this algorithm is to take a node and insert it to it's correct position according to the heap's property.
+If this algorithm is called on an index, it will heapfy the remaining array, i.e from that particular index to the size of the array.
+It also works in O(logN), and when we are building a heap inside the for loop in the main function it happens in O(N).
+
+In Heap Sort we will build a heap if direct array input is given, and then we will sort it.
+Time Complexity of Heap Sort is N*logN.
+
+We can easily implement Heaps using Priority queue, inside the header file "queue". By default it implements Max Heap,
+the syntax is priority_queue(data_type) (name of heap). Eg priority_queue<int> pq;
+
+We can also implement min heap using Priority queue by the following syntax priority_queue<int, vector<int>, greater<int>> minHeap;
