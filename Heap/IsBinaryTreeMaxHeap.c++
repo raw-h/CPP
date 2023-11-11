@@ -34,8 +34,10 @@ bool isCBT(struct Node* root, int index, int count){
 }
 
 bool isMaxHeap(struct Node* root){
-    if(root->left == NULL && root->right == NULL || root->right == NULL)
-        return true;
+    if(root->left == NULL && root->right == NULL)
+    
+    if(root->right == NULL)
+        return (root->data > root->left->data);
     else{
         bool left = isMaxHeap(root->left);
         bool right = isMaxHeap(root->right);
